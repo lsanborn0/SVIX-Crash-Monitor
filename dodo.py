@@ -82,7 +82,7 @@ def mv(from_path, to_path):
     if OS_TYPE == "nix":
         command = f"mv {from_path} {to_path}"
     else:
-        command = f"move {from_path} {to_path}"
+        command = f'move "{from_path}" "{to_path}"'
     return command
 
 

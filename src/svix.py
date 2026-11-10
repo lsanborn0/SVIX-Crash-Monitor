@@ -58,7 +58,7 @@ def svix_squared(cdf):
     >>> moneyness = np.linspace(0.5, 1.5, 9)
     >>> smile = pd.DataFrame({"days_to_maturity": 30, "moneyness": moneyness,
     ...     "implied_vol": 0.20, "cp_flag": np.where(moneyness <= 1.0, "P", "C")})
-    >>> round(svix_squared(risk_neutral_cdf(smile, rate=0.03)), 4)
+    >>> float(round(svix_squared(risk_neutral_cdf(smile, rate=0.03)), 4))
     0.0401
     """
     ## TODO: Implement this function as specified in the docstring above.

@@ -75,7 +75,7 @@ def crash_probability(cdf, alpha):
     >>> smile = pd.DataFrame({"days_to_maturity": 30, "moneyness": moneyness,
     ...     "implied_vol": 0.30, "cp_flag": np.where(moneyness <= 1.0, "P", "C")})
     >>> cdf = risk_neutral_cdf(smile, rate=0.03)
-    >>> round(crash_probability(cdf, 0.90), 4) < round(risk_neutral_crash_prob(cdf, 0.90), 4)
+    >>> bool(round(crash_probability(cdf, 0.90), 4) < round(risk_neutral_crash_prob(cdf, 0.90), 4))
     True
     """
     ## TODO: Implement this function as specified in the docstring above.
